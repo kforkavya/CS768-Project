@@ -519,15 +519,15 @@ def plot_memory_vs_layers(
                 ha="center", color=color, fontsize=8, fontweight="bold",
             )
 
-    ax.axhline(y=11, color="grey", linestyle="--", alpha=0.6, linewidth=1.2, label="11 GB GPU")
-    ax.axhline(y=32, color="black", linestyle="--", alpha=0.4, linewidth=1.2, label="32 GB GPU")
+    # ax.axhline(y=11, color="grey", linestyle="--", alpha=0.6, linewidth=1.2, label="11 GB GPU")
+    # ax.axhline(y=32, color="black", linestyle="--", alpha=0.4, linewidth=1.2, label="32 GB GPU")
 
     ax.set_xlabel("Number of Layers", fontsize=12)
     ax.set_ylabel("Peak GPU Memory (GB)", fontsize=12)
     ax.set_title(title, fontsize=13)
     ax.legend(fontsize=9, loc="upper left")
     ax.grid(True, alpha=0.3)
-    ax.set_ylim(0, 36)
+    # ax.set_ylim(0, 36)
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=150)
