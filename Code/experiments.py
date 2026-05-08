@@ -967,7 +967,7 @@ def main():
             results_dir=args.results_dir,
         )
         print(df.to_string())
-        plot_memory_vs_layers(df, save_path=f"{args.plots_dir}/benchmark_memory.png")
+        plot_memory_vs_layers(df, save_path=f"{args.plots_dir}/benchmark_memory_{args.dataset}.png")
         return
 
     print(f"\n[Training] {args.model} | {args.layers}L | {args.hidden}ch | "
