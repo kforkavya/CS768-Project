@@ -943,8 +943,8 @@ def main():
                         help="Run memory benchmark across model types and depths")
     args = parser.parse_args()
 
-    print_complexity_table()
-    print_paper_tables()
+    # print_complexity_table()
+    # print_paper_tables()
 
     if args.plots_only:
         plot_paper_figures(args.plots_dir)

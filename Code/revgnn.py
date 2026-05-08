@@ -7,11 +7,11 @@ Implementation of:
 
 Implemented architectures
 --------------------------
-1. ResGNN          – residual GNN baseline              O(LND) memory
-2. RevGNN          – grouped reversible GNN             O( ND) memory  ← paper's main contribution
-3. WT-ResGNN       – weight-tied residual GNN           O(LND) memory, O(D²) params
-4. WT-RevGNN       – weight-tied reversible GNN         O( ND) memory, O(D²) params
-5. DEQ-GNN         – deep equilibrium GNN               O( ND) memory, O(D²) params (infinite depth)
+1. ResGNN          - residual GNN baseline              O(LND) memory
+2. RevGNN          - grouped reversible GNN             O( ND) memory  ← paper's main contribution
+3. WT-ResGNN       - weight-tied residual GNN           O(LND) memory, O(D²) params
+4. WT-RevGNN       - weight-tied reversible GNN         O( ND) memory, O(D²) params
+5. DEQ-GNN         - deep equilibrium GNN               O( ND) memory, O(D²) params (infinite depth)
 
 Memory complexity comparison (Table 4 in the paper):
     Full-batch GNN       : O(LND)   params O(LD²)
@@ -298,7 +298,7 @@ def rev_block_apply(x1, x2, F_mod, G_mod, edge_index, edge_attr, dropout_mask):
 
 class ResGNN(nn.Module):
     """
-    Residual GNN – baseline model.
+    Residual GNN - baseline model.
 
     Memory complexity of activations: O(L·N·D)
     (scales linearly with depth → runs out of memory for large L)
